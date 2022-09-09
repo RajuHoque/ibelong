@@ -23,7 +23,7 @@ const Sidebar = ()=>{
                         <li className="navitem">
                             <div>
                             <img src={overviewLogo} alt="overview"></img>
-                            <NavLink to='/overview'>overview</NavLink>
+                            <NavLink to='/'>overview</NavLink>
 
                             </div>
                             

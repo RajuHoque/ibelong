@@ -13,7 +13,7 @@ const Main=()=>{
             <Sidebar/>
             <Routes>
           <Route  path='/users' element={<Users/>}/>
-          <Route  path='/overview' element={<Overview/>}/>
+          <Route  path='/' element={<Overview/>}/>
           <Route  path='/events' element={<Events/>}/>
           <Route  path='/userProfile' element={<UserProfile/>}/>
           

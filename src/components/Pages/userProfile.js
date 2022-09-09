@@ -6,6 +6,9 @@ import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import {Table} from 'antd';
 import {useEffect} from 'react';
+import { NavLink } from 'react-router-dom';
+import backLogo from '../../images/backLogo.png';
+import UserProfileDetails from './userProfileDetails/userProfileDetails';
 
 const columns = [
   {
@@ -60,6 +63,17 @@ const UserProfile = () => {
   
   return (
 <div className={classes.dashboard}>
+        
+          <div >
+            <NavLink to='/users'>
+              <div className={classes['profile-header']}>
+              <img src={backLogo} alt="back"/>
+              <h1>Employee details page</h1>
+              </div>
+            </NavLink>
+          </div>
+          <UserProfileDetails/>
+          
             <main className={classes.main}>
               
               <div className={classes.tableHeader}>

@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import {Input,Table} from 'antd';
 import {useEffect} from 'react';
+import userImage from '../../images/userImage.png';
 
 const columns = [
   {
@@ -13,7 +14,22 @@ const columns = [
     render:(text)=>{
       return(
         
-        <NavLink to='/userProfile' className={classes.userProfile}>{text}</NavLink>
+        <NavLink to='/userProfile' className={classes.userProfile}>
+          
+          <div className={classes.evenCol}>
+            <div className={classes.col}>
+              <img src={userImage} alt="userimage"/>
+            </div>
+            <div className={classes.col}>
+              <h2>{text}</h2>
+              <p>Employee Id</p>
+            </div>
+            <div className={classes.col}>
+              
+            </div>
+            
+          </div>
+          </NavLink>
 
       )
     }
@@ -22,11 +38,21 @@ const columns = [
     title: 'Department',
     dataIndex: 'department',
     key: 'age',
+    render:(text)=>{
+      return(
+        <p className={classes.colItem}>{text}</p>
+      )
+    }
   },
   {
     title: 'Events Participated',
     dataIndex: 'eventno',
     key: 'address',
+    render:(text)=>{
+      return(
+        <p className={classes.colItem}>{text}</p>
+      )
+    },
     sorter:(record1,record2)=>{
       return record1.eventno>record2.eventno;
     },
@@ -35,12 +61,23 @@ const columns = [
     title: 'Designation',
     key: 'tags',
     dataIndex: 'designation',
+    render:(text)=>{
+      return(
+        <p className={classes.colItem}>{text}</p>
+      )
+    }
   },
   {
     title: 'Contact Details',
     dataIndex:'contacts',
     key: 'action',
+    render:(text)=>{
+      return(
+        <p className={classes.colItem}>{text}</p>
+      )
+    }
   },
+ 
 ];
 
 

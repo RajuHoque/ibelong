@@ -1,7 +1,17 @@
 .main{
     display:flex;
-    flex-direction:row;
-    width:100%;
+    flex-wrap:wrap;
     height:45rem;
     background-color: rgb(1, 24, 24);
+}
+
+.main >*:nth-child(1){
+    flex:1 1 11%;
+    min-width:8rem;
+
+}
+
+.main >*:nth-child(2){
+    flex:1 1 89%;
+
 }

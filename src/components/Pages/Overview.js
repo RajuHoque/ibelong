@@ -1,11 +1,12 @@
 
 import { Row, Col, Modal, Button } from "antd";
 import { useState } from "react";
-import img1 from "../../img/User Profile.png";
-import heartIcon from "../../img/heart icon.svg";
-import globe from "../../img/globe.svg"
-import "./Overview.css";
+import img1 from "../../images/userProfile.png";
+import heartIcon from "../../images/heart icon.svg";
+import globe from "../../images/globe.svg"
+import "./overview.css";
 import { HeartOutlined} from '@ant-design/icons';
+
 function Overview() {
   const [open, setOpen] = useState(false);
   const [heartColor,setColor]=useState('red');
@@ -52,15 +53,7 @@ function Overview() {
   return (
     <>
       <Row>
-        <Col
-          span={4}
-          style={{
-            boxSizing: "border-box",
-            width: "240px",
-            height: "139px",
-            backgroundColor: "#F8EECB",
-          }}
-        >
+        <Col span={4} style={{boxSizing: "border-box", width: "240px", height: "139px", backgroundColor: "#F8EECB",}}>
           <div
             className="vayu"
             style={{
